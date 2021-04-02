@@ -1,0 +1,141 @@
+article{
+    width:960px;
+    margin-right:auto;
+    margin-left:auto;
+    background-color:white;
+}
+.contents{
+    background-color:rgb(231, 224, 209);
+    padding:10px;
+    margin:70px 0px;
+}
+
+body{
+    margin: 0px;
+}
+
+
+/*ヘッダー*/
+.top{
+    position: relative;
+}
+.top h1{
+    position: absolute;
+    top: 130px;
+    left: 280px;
+    color: white;
+    font-family: Impact;
+    font-size:80px;
+}
+.top a{
+    position: absolute;
+    top: 350px;
+    left: 350px;
+    color: white;
+    font-family: Impact;
+    font-size:40px;
+}
+.navi{
+    background-color: rgb(87, 86, 86);
+    width: 100%;
+    height: 70px;
+    position: absolute;
+}
+.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+.item{
+    width:960px;
+    margin-right:auto;
+    margin-left:auto;
+}
+.item li{
+    font-size: 25px;
+    font-family:Gulim;
+    list-style: none;
+    text-align: center;
+}
+
+.item a{
+    text-decoration: none;
+    color: white;
+    float: right;
+    margin-left: 50px;
+    padding: 3px 20px;
+    transition: background 1s;
+}
+.item a:hover {
+    background: black;
+}
+
+
+
+/*プロフィール*/
+.profile{
+    height:300px;
+}
+.profile div{
+    margin: 30px 50px 0px 280px;
+}
+
+/*スキル*/
+.skillbox{
+    float: left;
+    background-color: white;
+    margin: 10px 28px;
+    padding:15px 10px;
+}
+.skill{
+    height: 400px;
+}
+.skillbox div{
+    float: left;
+    margin: 0px 30px;
+    text-align: center;
+}
+
+/*ワーク*/
+.works{
+    height: 1000px;
+}
+.works_box div{
+    float: left;
+    width: 300px;
+    background-color: white;
+    margin: 10px 44px 50px 44px;
+    padding: 40px 40px 20px 40px;
+}
+.works h3{
+    text-align: center;
+}
+
+
+
+/*画像*/
+#pic_top{
+    width:100%;
+}
+.pic_face{
+    width:200px;
+    float: left;
+    margin:0px 30px;
+}
+.pic_icon{
+    width:85px;
+}
+.works_box img{
+    width: 300px;
+    height: 190px;
+    border: 1px solid rgb(218, 217, 217);
+}
+.works_box img:hover {
+    opacity: 0.5;
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+ }
+.pic_mail{
+    width: 200px;
+}
