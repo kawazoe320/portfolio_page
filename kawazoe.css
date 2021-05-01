@@ -35,19 +35,23 @@ body{
     font-family: serif;
     font-size:80px;
 }
-.top p{
+
+
+.top a{
+    text-decoration: none;
+    color: black;
     position: absolute;
     font-size:25px;
     top:310px;
     left: 630px;
     border: solid 5px rgb(143, 5, 5);
     border-radius: 20px 20px 100px 100px ;
-    padding:30px 30px 40px 30px;
+    padding:20px 30px 40px 30px;
+    transition: all .3s ease 0s;
 }
-.top a{
-    text-decoration: none;
-    color: black;
-
+.top a:hover {
+	cursor: pointer;
+	transform: scale(1.2);
 }
 
 .navi{
