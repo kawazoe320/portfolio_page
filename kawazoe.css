@@ -13,8 +13,9 @@ article{
 .contents h2{
     color: white;
     background-color: rgb(131, 129, 129);
-    padding:20px 0px 20px 30px;
-    margin: 40px 20px;
+    border-radius: 20px 20px 50px 50px ;
+    padding:30px 0px 20px 30px;
+    margin: 25px 20px;
 }
 
 body{
@@ -97,7 +98,7 @@ body{
     height:400px;
 }
 .profile div{
-    margin: 30px 50px 0px 280px;
+    margin: 60px 50px 0px 280px;
 }
 
 /*スキル*/
@@ -158,5 +159,37 @@ body{
     transition-duration: 0.3s;
  }
 .pic_mail{
-    width: 200px;
+    width: 150px;
+    margin-left: 20px;
 }
+
+
+.topBtn {
+    position:fixed; /*固定*/
+    bottom:40px; /*場所を右下に移動*/
+    right:60px; /*場所を右下に移動*/
+    display:block; /*aタグをblock要素に変更*/
+    background-color:rgba(0,0,0,0.5);
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:11px;
+    width:60px;
+    height:60px;
+    text-align:center;
+    line-height:22px;
+    border-radius:30px;
+    padding-top:30px;
+    box-sizing:border-box;
+  }
+  .topBtn:before {
+    content:'\25B2';
+    position:absolute;
+    top:10px;
+    left:0;
+    width:100%;
+    text-align:center;
+    font-size:20px;
+  }
+
+  
