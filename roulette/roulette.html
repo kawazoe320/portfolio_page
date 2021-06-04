@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ルーレット</title>
+    <link rel="stylesheet" href="roulette.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+    <script>
+    var interval_id;
+    var pool = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+    var num;
+    
+    function start_roulette() {
+        interval_id = setInterval(roulette, 100);
+        $('.confirmed').removeClass('confirmed').addClass('fixed');　//選択済みtd要素をグレーに
+        $('#start').prop('disabled', true);
+        $('#stop, #reset').prop('disabled', false);
+    }
+
+    function roulette() {
+        num = Math.floor(Math.random() * pool.length); //0~15までの乱数を作成しnumに代入
+        $('td').removeClass('selected');
+        $('td').eq(pool[num]).addClass('selected');　//配列num番目のtd要素をピンクに
+    }
+
+    function stop_roulette() {
+        clearInterval(interval_id);
+        $('.selected').removeClass('.selected').addClass('confirmed'); //選択されたtd要素を赤に
+        pool.splice(num,1);　//配列からnum番の要素を一つ削除
+        
+        $('#start, #reset').prop('disabled', false);
+        $('#stop').prop('disabled', true);
+        
+        if (pool.length === 0) {
+            $('#reset').prop('disabled', false);
+            $('#start, #stop').prop('disabled', true);
+        }
+    }
+    
+    function reset_roulette() {
+        clearInterval(interval_id);
+        $('.selected, .confirmed, .fixed').removeClass();
+        $('#start').prop('disabled', false);
+        $('#reset, #stop').prop('disabled', true);
+        
+        pool = [];  　　　　　　　　　　　//配列を一旦空にして
+        for (var i=0; i <= 15; i++) {　　//0-15までの数字を作成し
+            pool.push(i);　　　　　　　　　　//pushメソッドで配列に追加する
+        }
+    }
+
+    $(function() {
+        for (var i=0; i <= 3; i++) {
+            $('#roulette').append('<tr></tr>');
+            for (var j=1; j <= 4; j++) {
+                var result = (i * 4) + j;
+                $('tr:last').append('<td>' + result + '</td>');
+            }
+        }
+
+        $('#start').click(start_roulette);
+        $('#stop').click(stop_roulette);
+        $('#reset').click(reset_roulette);
+        $('#stop, #reset').prop('disabled', true);
+    });
+    
+    </script>
+</head>
+<body>
+    <table id="roulette">
+    </table>    
+    <div id="button">
+        <button id="start">START</button>
+        <button id="stop">STOP</button>
+        <button id="reset">RESET</button>
+    </div>
+</body>
+</html>
