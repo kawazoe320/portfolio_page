@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Kawazoe's portfolio</title>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>       
+        <link rel="stylesheet" href="kawazoe.css">
+        <script>
+            
+            $(function(){
+                $('a[href^="#"]').click(function(){
+                    let speed = 500;
+                    let href= $(this).attr("href");
+                    let target = $(href == "#" || href == "" ? 'html' : href);
+                    let position = target.offset().top;
+                $("html, body").animate({scrollTop:position}, speed, "swing");
+                return false;
+                });
+                });
+
+            $(function() {
+                var menu = $('.navi'),
+                offset = menu.offset();
+            $(window).scroll(function () {
+                if($(window).scrollTop() > offset.top) {
+                menu.addClass('fixed');
+                } else {
+                menu.removeClass('fixed');
+                }
+            });
+            });
+            </script>
+    </head>
+        <header>
+            <div class="top">
+                <img src="pic/city.png" class="pic_top">
+                <h1>Kawazoe's portfolio</h1>
+                <a href="#profile"><p>welcome</p></a>
+            </div>
+            <div class="navi">
+            <ul class="item">
+                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#works">WORKS</a></li>
+                <li><a href="#skill">SKILL</a></li>
+                <li><a href="#profile">PROFILE</a></li>
+            </ul>
+            </div>
+        </header>
+    <body>
+        <article>
+            <section id="profile"></a>
+            <div class="contents profile">
+                <h2>PROFILE</h2>
+                <img src="pic/kenji.png" class="pic_face">
+                <div>はじめまして！  川添 健司と申します。</br>
+                    私は愛知県に住む、エンジニア志望の２４歳です。</br>
+                    大学卒業後、地方の公務員として１年間勤務しました。担当業務は、建築・土地開発・空き家対策・区画整理でした。</br>
+                    「エンジニアとして働きたい！」と考え、退職。現在、プログラミングスクールで学習中です。
+                </div>
+            </div>
+
+        <section id="skill"></a>
+        <div class="contents skill">
+            <h2>SKILL</h2>
+            <div class="htmlcss skillbox">
+                <div><p>HTML</p><img src="pic/HTML.png" class="pic_icon"><p>本ページ作成レベル</p></div>
+                <div><p>CSS</p><img src="pic/CSS.png" class="pic_icon"><p>本ページ作成レベル</p></div> 
+            </div>
+            <div class="jsphp skillbox">
+                <div><p>JavaScript</p><img src="pic/JavaScript.png" class="pic_icon"><p>jQuery,Vue.jsも学習中</p></div>
+                <div><p>PHP</p><img src="pic/PHP.png" class="pic_icon"><p>基礎を学習中</p></div>
+            </div>
+        </div>
+
+        <section id="works"></a>
+        <div class="contents works">
+            <h2>WORKS</h2>
+            <div class="works_box">
+                <div><img src="pic/works_portfolio.png"><h3>ポートフォリオ</h3><p>本ページです。</p></div>
+                <div><a href="roulette/roulette.html"><img src="pic/works_roulette.png"></a><h3>ルーレット</h3><p>１〜１６のランダムルーレットです。</p></div>
+                <div><a href="product/product.html"><img src="pic/works_product.png"></a><h3>商品一覧</h3><p>Vue.jsを使用。</p></div>
+                <div><img src="pic/coming_soon.png"><h3>サイト名</h3><p>準備中・・・</p></div>
+
+            </div>
+        </div>
+        
+        <section id="contact"></a>
+        <div class="contents contact">
+            <h2>CONTACT</h2>
+            <a href="mailto:lb15016-4323@sti.chubu.ac.jp"><img src="pic/mail_icon.png" class="pic_mail"></a>    
+        </div>
+        </article>
+        <a href="#profile" class="topBtn">TOP</a>
+        
+        
+        
+        
+        
+        
+        
+        
+    </body>
+</html> 
